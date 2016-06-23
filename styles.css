@@ -4,17 +4,24 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    color: #8ec8fe;
 }
 
 li {
     list-style: none;
 }
-.view {
+
+.view, .caption, .choices {
     padding: 0;
 }
+
 /* shirt choices sectioned */
-.shirt-option {
+.view {
     border: 2px solid #8ec8fe;
+    padding: 1em;
+}
+img {
+    width: 100%;
 }
 .tshirts > li {
     float: left;
@@ -22,10 +29,16 @@ li {
     min-width: 15em;
     margin: 1em;
 }
-
-img {
-    width: 100%;
+.caption p {
+    margin: 0;
 }
+.price {
+    font-weight: bold;
+}
+.choices > li {
+    border: 2px solid #8ec8fe;
+}
+
 
 /***
 shirt options
