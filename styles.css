@@ -32,11 +32,19 @@ img {
 .caption p {
     margin: 0;
 }
-.price {
-    font-weight: bold;
-}
 .choices > li {
     border: 2px solid #8ec8fe;
+}
+.name {
+    vertical-align: middle;
+    float: left;
+    padding-top: 0.5em;
+}
+.price {
+    font-weight: bold;
+    float: right;
+    vertical-align: middle;
+    padding-top: 0.5em;
 }
 
 
