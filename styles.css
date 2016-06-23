@@ -15,26 +15,31 @@ li {
     padding: 0;
 }
 
-/* shirt choices sectioned */
-.view {
-    border: 2px solid #8ec8fe;
-    padding: 1em;
-}
-img {
-    width: 100%;
-}
+/*** shirt choices sectioned into three parts ***/
 .tshirts > li {
     float: left;
     width: 30%;
     min-width: 15em;
     margin: 1em;
 }
-.caption p {
-    margin: 0;
+/* lets image fit in the box */
+img {
+    width: 100%;
 }
+.view {
+    border: 2px solid #8ec8fe;
+    padding: 1em;
+}
+
+
+/* choices have borders
+!!! need to fit in parent width of t-shirts!!! */
 .choices > li {
     border: 2px solid #8ec8fe;
 }
+
+
+/** Caption portion is aligned and centered **/
 .name {
     vertical-align: middle;
     float: left;
@@ -47,10 +52,10 @@ img {
     padding-top: 0.5em;
 }
 
-
-/***
-shirt options
-***/
+/* other styling */
+.caption p {
+    margin: 0;
+}
 
 /*** .front is hidden and .back shows
 when rotate button/font is clicked ***/
