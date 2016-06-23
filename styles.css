@@ -6,15 +6,18 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-/* shirt choices sectioned */
-body {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.tshirts li {
-    float: left;
+li {
     list-style: none;
+}
+.view {
+    padding: 0;
+}
+/* shirt choices sectioned */
+.shirt-option {
+    border: 2px solid #8ec8fe;
+}
+.tshirts > li {
+    float: left;
     width: 30%;
     min-width: 15em;
     margin: 1em;
