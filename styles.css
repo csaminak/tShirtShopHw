@@ -2,14 +2,32 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
 
-/******
-font-family: 'Open Sans', sans-serif;
-*******/
+/* shirt choices sectioned */
+body {
+    width: 100%;
+    margin: 0 auto;
+}
 
-
-/*Inline shirt section*/
 .tshirts li {
     float: left;
     list-style: none;
+    width: 30%;
+    min-width: 15em;
+    margin: 1em;
 }
+
+img {
+    width: 100%;
+}
+
+/***
+shirt options
+***/
+
+/*** .front is hidden and .back shows
+when rotate button/font is clicked ***/
+/** :click :hide :active **/
