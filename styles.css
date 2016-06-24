@@ -4,14 +4,40 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #8ec8fe;
+    color: #81bce6;
 }
 
+/***colors
+Yellow:#d8ad7a
+Blue:#81bce6
+Pink:#d482aa
+Green:#94be9a
+***/
+
+/*General Styling*/
+ul {
+    padding: 0;
+}
 li {
     list-style: none;
 }
 
+/* 3 articles sectioned and floating */
+.tshirts {
+    float: left;
+    margin: 1em;
+    max-width: 15em;
+    min-width: 5em;
+    border: 2px solid #81bce6;
+}
+.view img {
+    width: 100%;
+}
 
+/* make selections centered */
+
+
+/* align text at the bottom*/
 
 
 /*** .front is hidden and .back shows
