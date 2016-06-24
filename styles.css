@@ -36,7 +36,6 @@ img {
 !!! need to fit in parent width of t-shirts!!! */
 .choices > li {
     border: 2px solid #8ec8fe;
-    box-sizing: content-box;
     float: left;
 }
 
