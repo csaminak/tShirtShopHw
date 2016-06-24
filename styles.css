@@ -32,25 +32,29 @@ img {
 }
 
 
-/* choices have borders
-!!! need to fit in parent width of t-shirts!!! */
-.choices > li {
-    border: 2px solid #8ec8fe;
-    float: left;
-}
-
-
 /** Caption portion is aligned and centered **/
-.name {
-    vertical-align: middle;
-    float: left;
-    padding-top: 0.5em;
-}
 .price {
     font-weight: bold;
     float: right;
     vertical-align: middle;
     padding-top: 0.5em;
+}
+.name {
+    vertical-align: middle;
+    float: left;
+    padding-top: 0.5em;
+}
+
+/* choices have borders
+!!! need to fit in parent width of t-shirts!!! */
+.choices {
+    width: 100%;
+    display: table-cell;
+}
+.choices > li {
+    border: 2px solid #8ec8fe;
+    text-align: center;
+    float: left;
 }
 
 
