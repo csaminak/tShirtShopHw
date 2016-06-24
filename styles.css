@@ -11,57 +11,8 @@ li {
     list-style: none;
 }
 
-.view, .caption, .choices {
-    padding: 0;
-}
-
-/*** shirt choices sectioned into three parts ***/
-.tshirts > li {
-    float: left;
-    width: 30%;
-    min-width: 15em;
-    margin: 1em;
-}
-/* lets image fit in the box */
-img {
-    width: 100%;
-}
-.view {
-    border: 2px solid #8ec8fe;
-    padding: 1em;
-}
 
 
-/** Caption portion is aligned and centered **/
-.price {
-    font-weight: bold;
-    float: right;
-    vertical-align: middle;
-    padding-top: 0.5em;
-}
-.name {
-    vertical-align: middle;
-    float: left;
-    padding-top: 0.5em;
-}
-
-/* choices have borders
-!!! need to fit in parent width of t-shirts!!! */
-.choices {
-    width: 100%;
-    display: table-cell;
-}
-.choices > li {
-    border: 2px solid #8ec8fe;
-    text-align: center;
-    float: left;
-}
-
-
-/* other styling */
-.caption p {
-    margin: 0;
-}
 
 /*** .front is hidden and .back shows
 when rotate button/font is clicked ***/
