@@ -27,22 +27,24 @@ li {
 
 /* 3 articles sectioned and floating */
 .tshirts {
+    position: relative;
     float: left;
-    margin: 1em;
+    margin: 2em;
     width: 30%;
     max-width: 20em;
 }
 img {
     width: 100%;
+    top: 0;
+    left: 0;
 }
 .view {
-    padding: 1em;
     border: 2px solid #81bce6;
-    border-bottom: 0;
+    position: relative;
 }
 
 /* make selections centered and aligned */
-.selections {
+nav {
     display: inline-block;
 }
 .selections ul {
@@ -54,26 +56,23 @@ img {
     text-align: center;
     padding: 0.25em;
     border: 2px solid #81bce6;
-
 }
 
 /* set size tab */
 .sizes li {
     float: none;
     text-align: center;
-    position: relative;
 }
 
 /* Set colors tab */
 .colors {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border: 2px solid #81bce6;
     background-color: white;
 }
 .colors li {
-    float: left;
-    margin: 2px;
+    margin: 5px;
     border: none;
     height: 15px;
     width: 15px;
@@ -95,6 +94,9 @@ img {
 .caption {
     display: block;
     margin: 0;
+    max-width: 20em;
+}
+.caption li {
 }
 .name {
     float: left;
@@ -107,8 +109,20 @@ img {
 /*** .front is hidden and .back shows
 when rotate button/font is clicked ***/
 /** :click :hide :active **/
-/*.rotate {
-    position: relative;
+.front {
+    position: absolute;
+    z-index: 1;
+}
+.back {
+    z-index: 2;
+}
+.rotate:hover .back {
+    position: absolute;
+    z-index: 3;
+}
+
+.rotate {
+    position: absolute;
     top: 0;
     right: 0;
-}*/
+}
