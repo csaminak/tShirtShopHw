@@ -43,7 +43,7 @@ img {
     position: relative;
 }
 
-/* make selections centered and aligned */
+/* SELECTIONS NEED TO BE ALIGNED */
 nav {
     display: inline-block;
 }
@@ -59,9 +59,35 @@ nav {
 }
 
 /* set size tab */
+.sizes {
+    width: 2em;
+    height: 113px;
+    border: 2px solid #81bce6;
+    background-color: white;
+    position: relative;
+}
 .sizes li {
-    float: none;
+    position: absolute;
+    z-index: 1;
+    display: block;
     text-align: center;
+    padding: 0 0.25em;
+}
+.sm {
+    top: 2px;
+    left: 6px;
+}
+.med {
+    top: 30px;
+    left: 3px
+}
+.la {
+    top: 58px;
+    left: 8px;
+}
+.xl {
+    top: 85px;
+    left: 4px;
 }
 
 /* Set colors tab */
@@ -70,24 +96,35 @@ nav {
     height: 60px;
     border: 2px solid #81bce6;
     background-color: white;
+    position: relative;
 }
 .colors li {
     margin: 5px;
     border: none;
     height: 15px;
     width: 15px;
+    position: absolute;
+    z-index: 1;
 }
 .blue {
     background-color: #81bce6;
+    top: 0;
+    left: 0;
 }
 .green {
     background-color: #94be9a;
+    top: 0;
+    right: 0;
 }
 .pink {
     background-color: #d482aa;
+    bottom: 0;
+    left: 0;
 }
-.yellow{
+.yellow {
     background-color: #d8ad7a;
+    bottom: 0;
+    right: 0;
 }
 
 /* align caption at the bottom */
@@ -106,9 +143,7 @@ nav {
     font-weight: bold;
 }
 
-/*** .front is hidden and .back shows
-when rotate button/font is clicked ***/
-/** :click :hide :active **/
+/* shirt view is changed when rotate button is hovered */
 .front {
     position: absolute;
     z-index: 1;
@@ -120,7 +155,6 @@ when rotate button/font is clicked ***/
     position: absolute;
     z-index: 3;
 }
-
 .rotate {
     position: absolute;
     top: 0;
