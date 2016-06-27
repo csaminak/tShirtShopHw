@@ -22,8 +22,7 @@ li {
 .tshirts {
     position: relative;
     float: left;
-    margin: 2em;
-    max-width: 30%;
+    margin: 1%;
 }
 img {
     width: 100%;
@@ -33,7 +32,7 @@ img {
 .view {
     border: 2px solid #81bce6;
     position: relative;
-    padding: 1em;
+    padding: 5%;
 }
 
 /* SELECTIONS NEED TO BE ALIGNED */
@@ -173,4 +172,16 @@ li.rotate {
 .selections li:hover {
     color: #fff;
     background-color: #81bce6;
+}
+
+/*ADDING RESPONSIVE DESIGN ELEMENTS*/
+@media screen (min-width: 240px, max-width: 640px) {
+
+}
+
+@@media screen (min-width: 641px, max-width: 1365px) {
+
+}
+@media screen (min-width: 1366px) {
+
 }
