@@ -14,12 +14,16 @@ ul {
 li {
     list-style: none;
 }
+main {
+    margin: 6px auto;
+    max-width: 228px; /*total px for main content including space and margins*/
+}
 
 /* 3 articles sectioned */
 .tshirts {
     position: relative;
-    max-width: 100px;
-    margin: 4px;
+    width: 100px;
+    margin: 7px;
     display: inline-block;
 }
 img {
@@ -34,16 +38,20 @@ img {
 /* SELECTIONS NEED TO BE ALIGNED */
 .selections {
     float: left;
-    max-width: 100px;
-    margin: 0;
+    width: 96px;
+    margin: -2px 0 0 0;
+    border: 2px solid #81bce6;
 }
 .selections > li {
     float: left;
-    width: 20px;
+    width: 20%;
     text-align: center;
-    border: 2px solid #81bce6;
     box-sizing: border-box;
     font-size: 0.5em;
+    border-right: 2px solid #81bce6;
+}
+.selections li:nth-child(5) {
+    border-right: none;
 }
 
 /* set size tab */
@@ -157,12 +165,13 @@ ul.colors {
 /* shirt view is changed when rotate button is hovered */
 
 /*rotate button styling*/
-li.rotate {
+.rotate {
     position: absolute;
     top: 0;
     right: 0;
     background-color: #fff;
     width: 15px;
+    border: 2px solid #81bce6;
 }
 .rotate i {
     font-size: 0.5em;
