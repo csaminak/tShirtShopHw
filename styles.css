@@ -18,6 +18,9 @@ li {
     margin: 0;
     clear: both;
 }
+article {
+    float: left;
+}
 
 /* CENTER PAGE*/
 
@@ -39,57 +42,49 @@ img {
 .view {
     border: 2px solid #81bce6;
     position: relative;
+    padding: 1em;
 }
 
 /* SELECTIONS NEED TO BE ALIGNED */
-.selections {
-    float: left;
+main {
     width: 100%;
 }
-.selections ul {
-
-}
-.selections li {
-    width: auto;
+ul.selections {
     float: left;
+    width: 100%;
+    margin: 0;
+}
+.selections > li {
+    float: left;
+    width: 20%;
     text-align: center;
     border: 2px solid #81bce6;
     padding: 0.25em;
+    box-sizing: border-box;
 }
 
 /* set size tab */
-.sizes {
+.size-tab{
+    position: relative;
+}
+ul.sizes {
     width: 2em;
-    height: 113px;
+    height: 90px;
     border: 2px solid #81bce6;
     background-color: white;
     text-align: center;
-    position: relative;
+    position: absolute;
+    bottom: 32px;
+    left: -3px;
     z-index: 1;
-    display: none;
 }
 .sizes li {
-    display: block;
     text-align: center;
     padding: 0 0.25em;
     border: none;
 }
-.sizes:hover {
-    width: 2em;
-    height: 113px;
-    border: 2px solid #81bce6;
-    background-color: white;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-.sizes li:hover {
-    position: absolute;
-    z-index: 3;
-    display: block;
-    text-align: center;
-    padding: 0 0.25em;
-    border: none;
+.size-tab:hover {
+    opacity: 1;
 }
 .sm {
     top: 2px;
@@ -109,28 +104,25 @@ img {
 }
 
 /* Set colors tab */
-.colors {
-    width: 1em;
-    height: 1em;
-    padding: 0.2em 0.25em;
-    background-color: #81bce6;
+.color-tab {
     position: relative;
+    background-color: #fff;
+}
+ul.colors {
+    position: absolute;
+    border: 2px solid #81bce6;
+    width: 36px;
+    height: 36px;
+    bottom: 32px;
+    left: -5px;
     z-index: 1;
 }
 .colors li {
-    margin: 5px;
-    border: 2px solid #fff;
-    height: 15px;
-    width: 15px;
-    display: none;
-}
-.colors li:hover {
-    margin: 5px;
     border: 2px solid #fff;
     height: 15px;
     width: 15px;
     position: absolute;
-    z-index: 3;
+    z-index: 2;
 }
 .blue {
     background-color: #81bce6;
@@ -167,12 +159,9 @@ img {
     position: absolute;
     z-index: 1;
 }
-.back {
-    z-index: 2;
-}
-.rotate:active .back {
+.rotate:hover .back {
     position: absolute;
-    z-index: 3;
+    z-index: 2;
 }
 .rotate {
     position: absolute;
