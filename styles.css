@@ -23,7 +23,7 @@ li {
     position: relative;
     float: left;
     margin: 2em;
-    max-width: 20em;
+    max-width: 30%;
 }
 img {
     width: 100%;
@@ -42,7 +42,7 @@ ul.selections {
     width: 100%;
     margin: 0;
 }
-.selections > li {
+ul.selections > li {
     float: left;
     width: 20%;
     text-align: center;
@@ -64,15 +64,16 @@ ul.sizes {
     position: absolute;
     bottom: 36px;
     left: 14px;
-    z-index: 1;
+    visibility: hidden;
 }
 .sizes li {
+    position: absolute;
     text-align: center;
     padding: 0 0.25em;
     border: none;
 }
-.size-tab:hover {
-    opacity: 1;
+ul.sizes:hover {
+    visibility: visible;
 }
 .sm {
     top: 2px;
@@ -103,6 +104,7 @@ ul.colors {
     height: 46px;
     bottom: 36px;
     left: 5px;
+    visibility: hidden;
     z-index: 1;
 }
 .colors li {
@@ -110,7 +112,18 @@ ul.colors {
     height: 20px;
     width: 20px;
     position: absolute;
+    visibility: hidden;
     z-index: 2;
+}
+.colors:hover {
+    position: absolute;
+    visibility: visible;
+    z-index: 3;
+}
+.colors li:hover {
+    position: absolute;
+    visibility: visible;
+    z-index: 4;
 }
 .blue {
     background-color: #81bce6;
@@ -143,18 +156,17 @@ ul.colors {
 }
 
 /* shirt view is changed when rotate button is hovered */
-.front {
-    position: absolute;
-    z-index: 1;
-}
-.rotate:hover .back {
-    position: absolute;
-    z-index: 2;
-}
-.rotate {
+
+/*rotate button styling*/
+li.rotate {
     position: absolute;
     top: 0;
     right: 0;
+    background-color: #fff;
+    max-width: 1.5em;
+}
+.rotate i {
+    font-size: 1em;
 }
 
 /* selection items highlighted */
