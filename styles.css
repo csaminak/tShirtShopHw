@@ -23,7 +23,7 @@ main {
 .tshirts {
     position: relative;
     width: 100px;
-    margin: 7px;
+    margin: 7px 7px 15px 7px;
     display: inline-block;
 }
 img {
@@ -35,23 +35,25 @@ img {
     padding: 4px;
 }
 
-/* SELECTIONS NEED TO BE ALIGNED */
+/* selections aligned */
 .selections {
     float: left;
-    width: 96px;
+    width: 100px;
     margin: -2px 0 0 0;
-    border: 2px solid #81bce6;
 }
 .selections > li {
     float: left;
-    width: 20%;
+    width: 50px;
+    height: 50px;
     text-align: center;
     box-sizing: border-box;
-    font-size: 0.5em;
-    border-right: 2px solid #81bce6;
+    font-size: 1em;
+    padding: 13px 0;
+    border: 2px solid #81bce6;
 }
-.selections li:nth-child(5) {
-    border-right: none;
+/* hover over selections */
+.selections > li:hover {
+    background-color: #81bce6;
 }
 
 /* set size tab */
@@ -151,35 +153,12 @@ ul.colors {
 
 /* align caption at the bottom */
 .caption li {
-    font-size: 0.7em;
-}
-.name {
-    float: left;
+    font-size: 0.9em;
+    text-align: center;
 }
 .price {
-    float: right;
     font-weight: bold;
-}
-
-/* shirt view is changed when rotate button is hovered */
-
-/*rotate button styling*/
-.rotate {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #fff;
-    max-width: 15px;
-    border: 2px solid #81bce6;
-}
-.rotate i {
-    font-size: 0.5em;
-}
-
-/* selection items highlighted */
-.selections li:hover {
-    color: #fff;
-    background-color: #81bce6;
+    text-align: center;
 }
 
 /*ADDING RESPONSIVE DESIGN ELEMENTS*/
@@ -190,16 +169,19 @@ ul.colors {
         max-width: 462px;
     }
     .tshirts {
-        width: 140px;
+        width: 138px;
+        margin: 8px 8px 20px 8px;
     }
     .selections {
-        width: 136px;
+        width: 138px;
+    }
+    .selections > li {
+        width: 46px;
+        height: 46px;
+        padding: 10px 0;
     }
     .caption li, .selections > li, .rotate i {
-        font-size: 0.75em;
-    }
-    .rotate {
-        max-width: 28px;
+        font-size: 1em;
     }
 }
 /* media settings for all other larger screens */
@@ -210,15 +192,36 @@ ul.colors {
     }
     .tshirts {
         width: 180px;
-        margin: 10px;
+        margin: 10px 10px 25px 10px;
+    }
+    .view {
+        padding: 10px;
     }
     .selections {
-        width: 176px;
+        width: 180px;
+        margin: -2px 0 5px 0;
+    }
+    .selections > li {
+        width: 36px;
+        height: 35px;
+        padding: 5px;
     }
     .caption li, .selections > li, .rotate i {
         font-size: 1em;
     }
+    .name {
+        float: left;
+    }
+    .price {
+        float: right;
+    }
+    /*rotate button styling*/
     .rotate {
-        max-width: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 36px;
+        background-color: #fff;
+        border: 2px solid #81bce6;
     }
 }
