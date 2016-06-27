@@ -155,7 +155,6 @@ ul.colors {
 }
 .name {
     float: left;
-
 }
 .price {
     float: right;
@@ -170,7 +169,7 @@ ul.colors {
     top: 0;
     right: 0;
     background-color: #fff;
-    width: 15px;
+    max-width: 15px;
     border: 2px solid #81bce6;
 }
 .rotate i {
@@ -184,10 +183,42 @@ ul.colors {
 }
 
 /*ADDING RESPONSIVE DESIGN ELEMENTS*/
-/* media query for middle group */
-@media screen and (min-width: 481px) and (max-width: 800px) {
-
+/* media settings for middle group */
+@media screen and (min-width: 480px) and (max-width: 800px) {
+    main {
+        margin: 8 auto;
+        max-width: 462px;
+    }
+    .tshirts {
+        width: 140px;
+    }
+    .selections {
+        width: 136px;
+    }
+    .caption li, .selections > li, .rotate i {
+        font-size: 0.75em;
+    }
+    .rotate {
+        max-width: 28px;
+    }
 }
+/* media settings for all other larger screens */
 @media screen and (min-width: 801px) {
-
+    main {
+        margin: 10 auto;
+        max-width: 800px;
+    }
+    .tshirts {
+        width: 180px;
+        margin: 10px;
+    }
+    .selections {
+        width: 176px;
+    }
+    .caption li, .selections > li, .rotate i {
+        font-size: 1em;
+    }
+    .rotate {
+        max-width: 30px;
+    }
 }
