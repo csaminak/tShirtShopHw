@@ -1,9 +1,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #81bce6;
+    color: $blue;
 }
-
-/*General Styling*/
 ul {
     padding: 0;
 }
@@ -11,15 +9,15 @@ li {
     list-style: none;
 }
 main {
-    margin: 6px auto;
-    max-width: 228px; /*total px for main content including space and margins*/
+    margin: 2% auto;
+    max-width: 100%;
 }
 
 /* 3 articles sectioned */
 .tshirts {
     position: relative;
-    width: 100px;
-    margin: 7px 7px 15px 7px;
+    width: 48%;
+    margin: 0.5%;
     display: inline-block;
 }
 img {
@@ -27,31 +25,32 @@ img {
     vertical-align: middle;
 }
 .view {
-    border: 2px solid #81bce6;
-    padding: 4px;
+    @include borderMain();
+    padding: 5%;
 }
 
 /* selections aligned */
 .selections {
     float: left;
-    width: 100px;
+    width: 100%;
     margin: -2px 0 0 0;
 }
 .selections > li {
     float: left;
-    width: 50px;
-    height: 50px;
+    width: 50%;
+    height: 50%;
     text-align: center;
     box-sizing: border-box;
-    font-size: 1em;
-    padding: 13px 0;
-    border: 2px solid #81bce6;
+    font-size: $selFontSize * 1.5;
+    padding: 5% 0;
+    @include borderMain();
 }
 /* hover over selections */
 .selections > li:hover {
-    background-color: #81bce6;
-    color: #fff;
-    box-shadow: 2px 3px 3px #4b6991;
+    position: relative;
+    background-color: $blue;
+    color: $white;
+    @include boxShadow();
 }
 
 /* set size tab */
@@ -59,84 +58,86 @@ img {
     position: relative;
 }
 .sizes {
-    width: 50px;
-    border: 2px solid #81bce6;
-    background-color: #fff;
-    text-align: center;
     position: absolute;
-    bottom: 15px;
-    left: -4px;
+    width: 80%;
+    margin: 10%;
+    @include borderMain();
+    background-color: $white;
+    bottom: 50%;
+    left: 0;
     display: none;
 }
 .sizes li {
-    color: #81bce6;
+    color: $blue;
+    text-align: center;
 }
 .size-tab:hover ul {
     display: block;
-    box-shadow: 2px 3px 3px #4b6991;
+    @include boxShadow();
     z-index: 1;
 }
 .sizes li:hover {
-    background-color: #81bce6;
-    color: #fff;
+    background-color: $blue;
+    color: $white;
     z-index: 2;
 }
 
 /* Set colors tab */
 .color-tab {
     position: relative;
-    background-color: #fff;
+    background-color: $white;
 }
 .colors {
     position: absolute;
-    border: 2px solid #81bce6;
-    width: 60px;
-    height: 60px;
-    bottom: 15px;
-    left: -10px;
+    @include borderMain();
+    background-color: $white;
+    width: 90%;
+    height: 100%;
+    bottom: 50%;
+    left: 2%;
     display: none;
 }
 .colors li {
-    border: 4px solid #fff;
-    height: 25px;
-    width: 25px;
+    height: 50%;
+    width: 50%;
     position: absolute;
 }
 .blue {
-    background-color: #81bce6;
+    background-color: $blue;
     top: 0;
     left: 0;
 }
 .green {
-    background-color: #94be9a;
+    background-color: $green;
     top: 0;
     right: 0;
 }
 .pink {
-    background-color: #d482aa;
+    background-color: $pink;
     bottom: 0;
     left: 0;
 }
 .yellow {
-    background-color: #d8ad7a;
+    background-color: $yellow;
     bottom: 0;
     right: 0;
 }
 .color-tab:hover ul {
-    box-shadow: 2px 3px 3px #4b6991;
+
     display: block;
     z-index: 1;
 }
 .colors li:hover {
-    width: 35px;
-    height: 35px;
+    @include borderMain(2px, $white);
+    width: 70%;
+    height: 70%;
     display: block;
     z-index: 2;
 }
 
 /* align caption at the bottom */
 .caption li {
-    font-size: 0.9em;
+    font-size: $captionSize * 2;
     text-align: center;
 }
 .price {
