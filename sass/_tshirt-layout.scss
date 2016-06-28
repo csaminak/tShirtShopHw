@@ -1,0 +1,112 @@
+.tshirts {
+    width: 48%;
+    margin: 0.5%;
+    display: inline-block;
+
+    .view {
+        @include borderMain();
+        padding: 5%;
+    }
+    img {
+        width: 100%;
+        vertical-align: middle;
+    }
+    .caption {
+        li {
+            font-size: $captionSize * 2;
+            text-align: center;
+        }
+        .price {
+        font-weight: bold;
+        }
+    }
+}
+
+
+.selections {
+    width: 100%;
+    margin: -2px 0 0 0;
+
+    > li {
+        float: left;
+        @include square(50%);
+        text-align: center;
+        box-sizing: border-box;
+        font-size: $selFontSize * 1.5;
+        padding: 5% 0;
+        @include borderMain();
+    }
+    > li:hover {
+        position: relative;
+        background-color: $hoverBackClr;
+        color: $hoverFontClr;
+        @include boxShadow();
+    }
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 800px) {
+    .tshirts {
+        width: 29%;
+        margin: 2%;
+
+        .selections > li {
+            @include square(33.3%);
+            padding: 2.5%;
+            font-size: $selFontSize * 1.5;
+        }
+        .caption > li {
+            font-size: $captionSize * 2.25;
+        }
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .tshirts {
+        position: relative;
+        width: 23%;
+        margin: 1%;
+        display: inline-block;
+
+        .caption li {
+            font-size: $captionSize * 2;
+        }
+        .name {
+            float: left;
+        }
+        .price {
+            float: right;
+        }
+        .rotate {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: $backColorSz;
+
+            &:hover {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+    .selections {
+        width: 100%;
+        margin: -2px 0 0 0;
+
+        > li {
+            float: left;
+            @include square(20%);
+            text-align: center;
+            box-sizing: border-box;
+            font-size: $selFontSize * 1.25;
+            padding: 2% 0;
+            @include borderMain();
+        }
+        > li:hover {
+            background-color: $hoverBackClr;
+            color: $hoverFontClr;
+            @include boxShadow();
+        }
+    }
+}

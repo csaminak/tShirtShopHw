@@ -14,7 +14,6 @@ main {
   max-width: 100%; }
 
 .tshirts {
-  position: relative;
   width: 48%;
   margin: 0.5%;
   display: inline-block; }
@@ -24,43 +23,85 @@ main {
   .tshirts img {
     width: 100%;
     vertical-align: middle; }
-  .tshirts .selections {
-    float: left;
-    width: 100%;
-    margin: -2px 0 0 0; }
-  .tshirts .size-tab {
-    position: relative; }
-    .tshirts .size-tab:hover ul {
-      display: block;
-      box-shadow: 2px 3px 3px #4b6991;
-      z-index: 1; }
-  .tshirts .color-tab {
-    position: relative;
-    background-color: #fff; }
-    .tshirts .color-tab:hover ul {
-      display: block;
-      z-index: 1; }
   .tshirts .caption li {
     font-size: 1em;
     text-align: center; }
-  .tshirts .price {
-    font-weight: bold;
-    text-align: center; }
+  .tshirts .caption .price {
+    font-weight: bold; }
 
-.selections > li {
-  float: left;
-  width: 50%;
-  height: 50%;
-  text-align: center;
-  box-sizing: border-box;
-  font-size: 1.5em;
-  padding: 5% 0;
-  border: 2px solid #81bce6; }
-.selections > li:hover {
-  position: relative;
-  background-color: #81bce6;
-  color: #fff;
-  box-shadow: 2px 3px 3px #4b6991; }
+.selections {
+  width: 100%;
+  margin: -2px 0 0 0; }
+  .selections > li {
+    float: left;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1.5em;
+    padding: 5% 0;
+    border: 2px solid #81bce6; }
+  .selections > li:hover {
+    position: relative;
+    background-color: #81bce6;
+    color: #fff;
+    box-shadow: 2px 3px 3px #4b6991; }
+
+@media screen and (min-width: 481px) and (max-width: 800px) {
+  .tshirts {
+    width: 29%;
+    margin: 2%; }
+    .tshirts .selections > li {
+      width: 33.3%;
+      height: 33.3%;
+      padding: 2.5%;
+      font-size: 1.5em; }
+    .tshirts .caption > li {
+      font-size: 1.125em; } }
+@media screen and (min-width: 801px) {
+  .tshirts {
+    position: relative;
+    width: 23%;
+    margin: 1%;
+    display: inline-block; }
+    .tshirts .caption li {
+      font-size: 1em; }
+    .tshirts .name {
+      float: left; }
+    .tshirts .price {
+      float: right; }
+    .tshirts .rotate {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #fff; }
+      .tshirts .rotate:hover {
+        position: absolute;
+        top: 0;
+        right: 0; }
+
+  .selections {
+    width: 100%;
+    margin: -2px 0 0 0; }
+    .selections > li {
+      float: left;
+      width: 20%;
+      height: 20%;
+      text-align: center;
+      box-sizing: border-box;
+      font-size: 1.25em;
+      padding: 2% 0;
+      border: 2px solid #81bce6; }
+    .selections > li:hover {
+      background-color: #81bce6;
+      color: #fff;
+      box-shadow: 2px 3px 3px #4b6991; } }
+.size-tab {
+  position: relative; }
+  .size-tab:hover ul {
+    display: block;
+    box-shadow: 2px 3px 3px #4b6991;
+    z-index: 1; }
 
 .sizes {
   position: absolute;
@@ -79,151 +120,52 @@ main {
     color: #fff;
     z-index: 2; }
 
-.colors {
-  position: absolute;
-  border: 2px solid #81bce6;
-  width: 70%;
-  height: 100%;
-  bottom: 50%;
-  left: 15%;
-  display: none; }
-  .colors li {
-    width: 50%;
-    height: 50%;
-    position: absolute; }
-  .colors .blue {
-    background-color: #81bce6;
-    top: 0;
-    left: 0; }
-  .colors .pink {
-    background-color: #d482aa;
-    bottom: 0;
-    left: 0; }
-  .colors .yellow {
-    background-color: #d8ad7a;
-    bottom: 0;
-    right: 0; }
-  .colors .green {
-    background-color: #94be9a;
-    top: 0;
-    right: 0; }
-  .colors li:hover {
-    border: 2px solid #fff;
-    width: 50%;
-    height: 50%;
+.color-tab {
+  position: relative;
+  background-color: #fff; }
+  .color-tab:hover ul {
     display: block;
-    z-index: 2; }
+    z-index: 1; }
+  .color-tab .colors {
+    position: absolute;
+    border: 2px solid #81bce6;
+    width: 70%;
+    height: 100%;
+    bottom: 50%;
+    left: 15%;
+    display: none; }
+
+.colors li {
+  width: 50%;
+  height: 50%;
+  position: absolute; }
+.colors .blue {
+  background-color: #81bce6;
+  top: 0;
+  left: 0; }
+.colors .pink {
+  background-color: #d482aa;
+  bottom: 0;
+  left: 0; }
+.colors .yellow {
+  background-color: #d8ad7a;
+  bottom: 0;
+  right: 0; }
+.colors .green {
+  background-color: #94be9a;
+  top: 0;
+  right: 0; }
+.colors li:hover {
+  border: 2px solid #fff;
+  width: 50%;
+  height: 50%;
+  display: block;
+  z-index: 2; }
 
 @media screen and (min-width: 481px) and (max-width: 800px) {
-  .tshirts {
-    width: 29%;
-    margin: 2%; }
-    .tshirts .selections > li {
-      width: 33.3%;
-      height: 33.3%;
-      padding: 2.5%;
-      font-size: 1.5em; }
-    .tshirts .caption > li {
-      font-size: 1.125em; }
-
-  /* set size tab */
-  .size-tab {
-    position: relative; }
-
-  .sizes {
-    position: absolute;
-    width: 80%;
-    margin: 10%;
-    border: 2px solid #81bce6;
-    background-color: #fff;
-    bottom: 50%;
-    display: none; }
-
-  .sizes li {
-    color: #81bce6;
-    text-align: center; }
-
-  .size-tab:hover ul {
-    display: block;
-    box-shadow: 2px 3px 3px #4b6991;
-    z-index: 1; }
-
-  .sizes li:hover {
-    background-color: #81bce6;
-    color: #fff;
-    z-index: 2; }
-
-  /* Set colors tab */
-  .color-tab {
-    position: relative;
-    background-color: #fff; }
-
   .colors {
-    position: absolute;
-    border: 2px solid #81bce6;
-    background-color: #fff;
-    width: 150%;
-    height: 150%;
-    bottom: 50%;
-    left: 50%;
-    display: none; }
-
-  .colors li {
-    height: 50%;
-    width: 50%;
-    position: absolute; }
-
-  .colors li:hover {
-    border: 2px solid #fff;
-    width: 60%;
-    height: 60%;
     display: block;
-    z-index: 2; } }
-@media screen and (min-width: 801px) {
-  main {
-    margin: 10 auto;
-    max-width: 800px; }
-
-  .tshirts {
-    width: 180px;
-    margin: 10px 10px 25px 10px; }
-
-  .view {
-    padding: 10px; }
-
-  .selections {
-    width: 180px;
-    margin: -2px 0 5px 0; }
-
-  .selections > li {
-    width: 36px;
-    height: 35px;
-    padding: 5px; }
-
-  .caption li, .selections > li, .rotate i {
-    font-size: 1em; }
-
-  .name {
-    float: left; }
-
-  .price {
-    float: right; }
-
-  .sizes {
-    bottom: 30px;
-    left: -11px; }
-
-  .colors {
-    bottom: 30px;
-    left: -17px; }
-
-  /*rotate button styling*/
-  .rotate {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 36px;
-    background-color: #fff;
-    border: 2px solid #81bce6; } }
+    width: 100%;
+    height: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */

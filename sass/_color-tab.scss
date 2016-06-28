@@ -1,0 +1,64 @@
+.color-tab {
+    position: relative;
+    background-color: $backColorSz;
+
+    &:hover ul {
+        display: block;
+        z-index: 1;
+    }
+    .colors {
+        position: absolute;
+        @include borderMain();
+        @include rectangle(70%,100%);
+        bottom: 50%;
+        left: 15%;
+        display: none;
+    }
+}
+
+
+.colors {
+    li {
+        @include square(50%);
+        position: absolute;
+    }
+    .blue {
+        background-color: $color1;
+        top: 0;
+        left: 0;
+    }
+    .pink {
+        background-color: $color2;
+        bottom: 0;
+        left: 0;
+    }
+    .yellow {
+        background-color: $color3;
+        bottom: 0;
+        right: 0;
+    }
+    .green {
+        background-color: $color4;
+        top: 0;
+        right: 0;
+    }
+    li:hover {
+        @include borderMain(2px, #fff);
+        @include square(50%);
+        display: block;
+        z-index: 2;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 800px) {
+
+    .colors {
+        display: block;
+        @include square(100%);
+    }
+
+}
+
+@media screen and (min-width: 801px) {
+
+}
