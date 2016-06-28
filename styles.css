@@ -55,6 +55,7 @@ img {
 .selections > li:hover {
     background-color: #81bce6;
     color: #fff;
+    box-shadow: 2px 3px 3px #4b6991;
 }
 
 /* set size tab */
