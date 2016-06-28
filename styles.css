@@ -76,10 +76,12 @@ img {
 }
 .size-tab:hover ul {
     display: block;
+    z-index: 1;
 }
 .sizes li:hover {
     background-color: #81bce6;
     color: #fff;
+    z-index: 2;
 }
 
 /* Set colors tab */
