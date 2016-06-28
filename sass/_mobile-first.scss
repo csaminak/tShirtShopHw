@@ -16,125 +16,111 @@
         float: left;
         width: 100%;
         margin: -2px 0 0 0;
-
-        > li {
-            float: left;
-            width: 50%;
-            height: 50%;
-            text-align: center;
-            box-sizing: border-box;
-            font-size: $selFontSize * 1.5;
-            padding: 5% 0;
-            @include borderMain();
-        }
-        > li:hover {
-            position: relative;
-            background-color: $hoverBackClr;
-            color: $hoverFontClr;
-            @include boxShadow();
-        }
     }
-}
+    .size-tab {
+        position: relative;
 
-
-
-.size-tab {
-    position: relative;
-
-    .sizes {
-        position: absolute;
-        width: 80%;
-        margin: 10%;
-        @include borderMain();
-        background-color: $backColorSz;
-        bottom: 50%;
-        left: 0;
-        display: none;
-
-        li {
-            color: $selectFontColor;
-            text-align: center;
-        }
-        li:hover {
-            background-color: #81bce6;
-            color: $hoverFontClr;
-            z-index: 2;
-        }
-    }
-    &:hover ul {
-        display: block;
-        @include boxShadow();
-        z-index: 1;
-    }
-}
-
-
-
-.color-tab {
-    position: relative;
-    background-color: $backColorSz;
-
-    .colors {
-        position: absolute;
-        @include borderMain();
-        width: 80%;
-        height: 100%;
-        bottom: 50%;
-        left: 7%;
-        display: none;
-
-        li {
-            height: 50%;
-            width: 50%;
-            position: absolute;
-        }
-        li:hover {
-            @include borderMain(2px, $borderColor);
-            width: 60%;
-            height: 60%;
+        &:hover ul {
             display: block;
-            z-index: 2;
+            @include boxShadow();
+            z-index: 1;
         }
     }
-    &:hover ul {
-        display: block;
-        z-index: 1;
+    .color-tab {
+        position: relative;
+        background-color: $backColorSz;
+
+        &:hover ul {
+            display: block;
+            z-index: 1;
+        }
+    }
+    .caption li {
+        font-size: $captionSize * 2;
+        text-align: center;
+    }
+    .price {
+        font-weight: bold;
+        text-align: center;
     }
 }
 
 
+.selections {
+    > li {
+        float: left;
+        @include square(50%);
+        text-align: center;
+        box-sizing: border-box;
+        font-size: $selFontSize * 1.5;
+        padding: 5% 0;
+        @include borderMain();
+    }
+    > li:hover {
+        position: relative;
+        background-color: $hoverBackClr;
+        color: $hoverFontClr;
+        @include boxShadow();
+    }
+}
 
-.blue {
-    background-color: $color1;
-    top: 0;
+.sizes {
+    position: absolute;
+    width: 80%;
+    margin: 10%;
+    @include borderMain();
+    background-color: $backColorSz;
+    bottom: 50%;
     left: 0;
-}
-.pink {
-    background-color: $color2;
-    bottom: 0;
-    left: 0;
-}
-.yellow {
-    background-color: $color3;
-    bottom: 0;
-    right: 0;
-}
-.green {
-    background-color: $color4;
-    top: 0;
-    right: 0;
+    display: none;
+
+    li {
+        color: $selectFontColor;
+        text-align: center;
+    }
+    li:hover {
+        background-color: #81bce6;
+        color: $hoverFontClr;
+        z-index: 2;
+    }
 }
 
+.colors {
+    position: absolute;
+    @include borderMain();
+    @include rectangle(70%,100%);
+    bottom: 50%;
+    left: 15%;
+    display: none;
 
-
-
-
-/* align caption at the bottom */
-.caption li {
-    font-size: $captionSize * 2;
-    text-align: center;
-}
-.price {
-    font-weight: bold;
-    text-align: center;
+    li {
+        @include square(50%);
+        position: absolute;
+    }
+    .blue {
+        background-color: $color1;
+        top: 0;
+        left: 0;
+    }
+    .pink {
+        background-color: $color2;
+        bottom: 0;
+        left: 0;
+    }
+    .yellow {
+        background-color: $color3;
+        bottom: 0;
+        right: 0;
+    }
+    .green {
+        background-color: $color4;
+        top: 0;
+        right: 0;
+    }
+    li:hover {
+        @include borderMain(2px, #fff);
+        @include square(50%);
+        display: block;
+        z-index: 2;
+    }
 }

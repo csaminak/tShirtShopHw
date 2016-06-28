@@ -1,6 +1,14 @@
 @mixin borderMain ($size:2px, $color:#81bce6) {
     border: $size solid $color;
 }
-@mixin boxShadow ($color: #4b6991) {
+@mixin boxShadow ($color:#4b6991) {
     box-shadow: 2px 3px 3px $color;
+}
+@mixin square ($num) {
+    width: $num;
+    height: $num;
+}
+@mixin rectangle ($width, $height:auto) {
+    width: $width;
+    height: $height;
 }

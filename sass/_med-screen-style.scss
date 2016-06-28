@@ -1,15 +1,11 @@
 @media screen and (min-width: 481px) and (max-width: 800px) {
-    main {
-        margin: 8px auto;
-        max-width: 100%;
-    }
+
     .tshirts {
         width: 29%;
         margin: 2%;
 
         .selections > li {
-            width: 33.3%;
-            height: 33.3%;
+            @include square(33.3%);
             padding: 2.5%;
             font-size: $selFontSize * 1.5;
         }
