@@ -62,13 +62,13 @@ img {
     position: relative;
 }
 .sizes {
-    width: 30px;
+    width: 50px;
     border: 2px solid #81bce6;
     background-color: #fff;
     text-align: center;
     position: absolute;
-    bottom: 0px;
-    left: 30px;
+    bottom: 0;
+    left: 0;
     display: none;
 }
 .sizes li {
@@ -76,6 +76,7 @@ img {
 }
 .size-tab:hover ul {
     display: block;
+    box-shadow: 2px 3px 3px #4b6991;
     z-index: 1;
 }
 .sizes li:hover {
@@ -188,6 +189,10 @@ img {
     }
     .price {
         float: right;
+    }
+    .sizes {
+        bottom: 34px;
+        left: -10px;
     }
     /*rotate button styling*/
     .rotate {
