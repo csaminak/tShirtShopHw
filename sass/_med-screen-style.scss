@@ -1,0 +1,24 @@
+@media screen and (min-width: 481px) and (max-width: 800px) {
+    main {
+        margin: 8px auto;
+        max-width: 462px;
+    }
+    .tshirts {
+        width: 138px;
+        margin: 8px 8px 20px 8px;
+    }
+    .selections {
+        width: 138px;
+    }
+    .selections > li {
+        width: 46px;
+        height: 46px;
+        padding: 10px 0;
+    }
+    .sizes {
+        left: -7px;
+    }
+    .caption li, .selections > li, .rotate i {
+        font-size: 1em;
+    }
+}
