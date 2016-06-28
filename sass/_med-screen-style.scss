@@ -6,97 +6,71 @@
     .tshirts {
         width: 29%;
         margin: 2%;
-    }
-    .selections > li {
-        width: 33.3%;
-        height: 33.3%;
-    }
-    .selections > li {
-        font-size: $selFontSize * 2;
-    }
-    .caption > li {
-        font-size: $captionSize * 3;
-    }
-}
 
-/* set size tab */
-.size-tab{
-    position: relative;
-}
-.sizes {
-    position: absolute;
-    width: 80%;
-    margin: 10%;
-    @include borderMain();
-    background-color: $white;
-    bottom: 50%;
-    right: 50%;
-    display: none;
-}
-.sizes li {
-    color: $blue;
-    text-align: center;
-}
-.size-tab:hover ul {
-    display: block;
-    @include boxShadow();
-    z-index: 1;
-}
-.sizes li:hover {
-    background-color: $blue;
-    color: $white;
-    z-index: 2;
-}
+        .selections > li {
+            width: 33.3%;
+            height: 33.3%;
+            padding: 2.5%;
+            font-size: $selFontSize * 1.5;
+        }
+        .caption > li {
+            font-size: $captionSize * 2.25;
+        }
+    }
 
-/* Set colors tab */
-.color-tab {
-    position: relative;
-    background-color: $white;
-}
-.colors {
-    position: absolute;
-    @include borderMain();
-    background-color: $white;
-    width: 150%;
-    height: 150%;
-    bottom: 50%;
-    left: 50%;
-    display: none;
-}
-.colors li {
-    height: 50%;
-    width: 50%;
-    position: absolute;
-}
-.blue {
-    background-color: $blue;
-    top: 0;
-    left: 0;
-}
-.green {
-    background-color: $green;
-    top: 0;
-    right: 0;
-}
-.pink {
-    background-color: $pink;
-    bottom: 0;
-    left: 0;
-}
-.yellow {
-    background-color: $yellow;
-    bottom: 0;
-    right: 0;
-}
-.color-tab:hover ul {
 
-    display: block;
-    z-index: 1;
-}
-.colors li:hover {
-    @include borderMain(2px, $white);
-    width: 70%;
-    height: 70%;
-    display: block;
-    z-index: 2;
+    /* set size tab */
+    .size-tab{
+        position: relative;
+    }
+    .sizes {
+        position: absolute;
+        width: 80%;
+        margin: 10%;
+        @include borderMain();
+        background-color: $backColorSz;
+        bottom: 50%;
+        display: none;
+    }
+    .sizes li {
+        color: $selectFontColor;
+        text-align: center;
+    }
+    .size-tab:hover ul {
+        display: block;
+        @include boxShadow();
+        z-index: 1;
+    }
+    .sizes li:hover {
+        background-color: #81bce6;
+        color: $hoverFontClr;
+        z-index: 2;
+    }
+    /* Set colors tab */
+    .color-tab {
+        position: relative;
+        background-color: $backColorSz;
+    }
+    .colors {
+        position: absolute;
+        @include borderMain();
+        background-color: $backColorSz;
+        width: 150%;
+        height: 150%;
+        bottom: 50%;
+        left: 50%;
+        display: none;
+    }
+    .colors li {
+        height: 50%;
+        width: 50%;
+        position: absolute;
+    }
+    .colors li:hover {
+        @include borderMain(2px, #fff);
+        width: 60%;
+        height: 60%;
+        display: block;
+        z-index: 2;
+    }
 }
