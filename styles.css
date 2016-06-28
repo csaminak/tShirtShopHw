@@ -150,9 +150,9 @@ img {
 
 /*ADDING RESPONSIVE DESIGN ELEMENTS*/
 /* media settings for middle group */
-@media screen and (min-width: 480px) and (max-width: 800px) {
+@media screen and (min-width: 481px) and (max-width: 800px) {
     main {
-        margin: 8 auto;
+        margin: 8px auto;
         max-width: 462px;
     }
     .tshirts {
