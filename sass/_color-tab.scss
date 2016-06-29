@@ -9,9 +9,9 @@
     .colors {
         position: absolute;
         @include borderMain();
-        @include rectangle(70%,100%);
+        @include rectangle(100%, 130%);
         bottom: 50%;
-        left: 15%;
+        right: 10%;
         display: none;
     }
 }
@@ -21,6 +21,13 @@
     li {
         @include square(50%);
         position: absolute;
+
+        &:hover {
+            @include borderMain(2px, #fff);
+            @include square(55%);
+            display: block;
+            z-index: 2;
+        }
     }
     .blue {
         background-color: $color1;
@@ -42,23 +49,29 @@
         top: 0;
         right: 0;
     }
-    li:hover {
-        @include borderMain(2px, #fff);
-        @include square(50%);
-        display: block;
-        z-index: 2;
-    }
 }
 
 @media screen and (min-width: 481px) and (max-width: 800px) {
-
     .colors {
-        display: block;
-        @include square(100%);
-    }
+        left: 10%;
 
+        li {
+            @include square(50%);
+
+            &:hover {
+                @include square(60%);
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 801px) {
+    .color-tab .colors {
+        @include rectangle(150%, 160%);
+        right: -30%;
 
+        li:hover {
+            @include square(65%);
+        }
+    }
 }

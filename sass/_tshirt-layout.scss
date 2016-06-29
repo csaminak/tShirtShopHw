@@ -1,6 +1,6 @@
 .tshirts {
-    width: 48%;
-    margin: 0.5%;
+    width: (100% / $numArtColSm) - (2 * $artMarSm);
+    margin: $artMarSm;
     display: inline-block;
 
     .view {
@@ -32,7 +32,7 @@
         @include square(50%);
         text-align: center;
         box-sizing: border-box;
-        font-size: $selFontSize * 1.5;
+        font-size: $selFontSize;
         padding: 5% 0;
         @include borderMain();
     }
@@ -47,16 +47,16 @@
 
 @media screen and (min-width: 481px) and (max-width: 800px) {
     .tshirts {
-        width: 29%;
-        margin: 2%;
+        width: (100% / $numArtColMd) - (2* $artMarMd);
+        margin: $artMarMd;
 
         .selections > li {
             @include square(33.3%);
             padding: 2.5%;
-            font-size: $selFontSize * 1.5;
+            font-size: $selFontSize;
         }
         .caption > li {
-            font-size: $captionSize * 2.25;
+            font-size: $captionSize * 1.5;
         }
     }
 }
@@ -64,12 +64,13 @@
 @media screen and (min-width: 801px) {
     .tshirts {
         position: relative;
-        width: 23%;
-        margin: 1%;
+        width: (100% / $numArtColLa) - (2 * $artMarLa);
+        margin: $artMarLa;
+        margin-bottom: 2em;
         display: inline-block;
 
-        .caption li {
-            font-size: $captionSize * 2;
+        .caption > li {
+            font-size: $captionSize * 1.5;
         }
         .name {
             float: left;
@@ -81,6 +82,7 @@
             position: absolute;
             top: 0;
             right: 0;
+            height: 15%;
             background-color: $backColorSz;
 
             &:hover {
@@ -99,7 +101,7 @@
             @include square(20%);
             text-align: center;
             box-sizing: border-box;
-            font-size: $selFontSize * 1.25;
+            font-size: $selFontSize * 0.75;
             padding: 2% 0;
             @include borderMain();
         }
